@@ -1,0 +1,19 @@
+<?php
+$title = 'News Content';
+$this->headTitle($title);
+?>
+
+<table class="table">
+<tr>
+    <th>ID</th>
+    <th>name</th>
+    <th>alias</th>
+</tr>
+<?php foreach ($rows as $row) : ?>
+<tr>
+	<td><?php echo $this->escapeHtml($row["id"]);?></td>
+    <td><?php echo $this->escapeHtml($row["title"]);?></td>
+    <td><?php echo $this->escapeHtml($row["alias"]);?></td>
+</tr>
+<?php endforeach; ?>
+</table>
